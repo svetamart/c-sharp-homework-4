@@ -50,4 +50,4 @@ int FindPositiveNumbers (int[] arr)
 Console.WriteLine();
 
 int outcome = FindPositiveNumbers(array);
-Console.WriteLine(outcome);
+Console.WriteLine($"В массиве {outcome} чисел/числа больше 0");
