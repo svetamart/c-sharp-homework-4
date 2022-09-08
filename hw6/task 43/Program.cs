@@ -59,7 +59,4 @@ string[] FindPointOfIntersection (double k1, double k2, double b1, double b2)
     arr[0] = Convert.ToString(x);
     arr[1] = Convert.ToString(y);
     return arr;
-    // y = a1 * x + c1;
-    // y = a2 * x + c2;
-    
 }
