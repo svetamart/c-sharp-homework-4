@@ -21,7 +21,7 @@ Console.WriteLine("Введите значения, которыми вы хот
 
 
 for (int i = 0; i < array.Length; i++)
-array[i] = int.Parse(Console.ReadLine());
+array[i] = int.Parse(Console.ReadLine()); // как сделать проверку на число для каждого элемента массива? через TryParse и bool у меня не получилось
 
 void PrintArray (int[] arr)
 {
