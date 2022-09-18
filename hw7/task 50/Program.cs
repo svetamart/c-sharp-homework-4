@@ -55,9 +55,9 @@ void PrintArray(int[,] array)
     }
 }
 
-string[] FindNumber (int[,] array, int number)
+int[] FindNumber (int[,] array, int number)
 {
-    string[] arr = new string[2];
+    int[] arr = new int[2];
 
      for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -65,21 +65,34 @@ string[] FindNumber (int[,] array, int number)
         {
             if(array[i, j] == number)
             {
-                arr[0] = Convert.ToString(i);
-                arr[1] = Convert.ToString(j);
+                arr[0] = i;
+                arr[1] = j;
+            }
+            else
+            {
+                arr[0] = -100;
+                arr[1] = 100;
             }
         }
     }
     return arr;
 }
 
-void PrintResult (string[] arr)
+void PrintResult (int[] arr)
 {
-    Console.Write($"({arr[0]}; {arr[1]})");
+    if(arr[0] == -100 || arr[1] == 100)
+    {
+        Console.WriteLine($"Элемента {number} в массиве нет");
+        return;
+    }
+    else
+    {
+        Console.Write($"({arr[0]}; {arr[1]})");
+    }
 }
 
 
-string[] newResult = FindNumber(result, number);
+int[] newResult = FindNumber(result, number);
 PrintResult(newResult);
 
 
